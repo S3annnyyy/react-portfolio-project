@@ -15,6 +15,7 @@ const Halo = () => {
                mouseControls: true,
                touchControls: true,
                gyroControls: false,
+               forceAnimate: true,
                minHeight: 1000,
                minWidth: 1000,
                scaleMobile: 1.0,
