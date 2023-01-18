@@ -35,3 +35,8 @@ input, textarea {
   animation: fadeOut 1s 1s;
   animation-fill-mode: forwards;
 }
+
+// Prevent horizontal scrolling
+body {
+  overflow-x: hidden;
+}

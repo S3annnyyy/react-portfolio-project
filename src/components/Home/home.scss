@@ -53,3 +53,16 @@
         }
     }
 }
+
+@media screen and (max-width: 800px) {
+    .home-page {
+        .text-zone {
+            position: initial;
+            width: 100%;
+            transform: none;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 200px;
+        }
+    }
+}
