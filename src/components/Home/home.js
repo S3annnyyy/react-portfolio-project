@@ -39,7 +39,7 @@ const Home = () => {
                         <br/>
                         <AnimatedLetters letterClass={letterClass}
                         strArray={jobArray}
-                        idx={22} />
+                        idx={25} />
                     </h1>
                     <h2>Information Systems Major / Tech & AI Enthusiast / Author</h2>
                     <Link to="/projects" className='flat-button'>VIEW MY PROJECTS</Link>

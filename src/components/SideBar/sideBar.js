@@ -1,16 +1,26 @@
 import { Link, NavLink } from 'react-router-dom'
 import './sideBar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUser, faEnvelope, faDiagramProject, faS } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUser, faEnvelope, faDiagramProject } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faGithub, faMedium } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react'
 
 
-const SideBar = () => (
-    <div className='nav-bar'>
+const SideBar = () => {
+    const [showNav, setShowNav] = useState(false);
+
+
+    return (
+        <div className='nav-bar'>
         <Link className='logo' to="/">
             {/* <a className='logoS'><FontAwesomeIcon icon={faS} color="#4d4d4e" /></a> */}
         </Link>
-        <nav>
+        <a href='#' className='toggle-button' onClick={() => setShowNav(true)}>
+            <span className='bar'></span>
+            <span className='bar2'></span>
+            <span className='bar'></span>
+        </a>
+        <nav className={showNav ? 'mobile-show': ''} onClick={() => setShowNav(false)}>
             <NavLink exact="true" activeclassname="active" to="/">
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
             </NavLink>
@@ -42,6 +52,7 @@ const SideBar = () => (
             </li>
         </ul>
     </div>
-)
+    )
+}
 
 export default SideBar
