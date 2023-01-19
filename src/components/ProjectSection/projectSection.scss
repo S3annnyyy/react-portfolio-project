@@ -1,0 +1,54 @@
+.slick-slide > div {
+    margin: 0 10px;
+}
+
+.slick-list {
+    margin: 0 -10px;
+}
+
+.project-page {
+    .text-zoneP {
+        position: absolute;
+        left: 13%;
+        top: 5%;
+        transform: translateY(-50%);
+        width: 40%;
+        max-height: 90%;
+
+        h1 {
+            color: #fff;
+            font-size: 55px;
+            margin: 0;
+            font-family: 'Coolvetica';
+            font-weight: 400;
+        }
+    }
+
+    .carousel {
+        margin-top: 100px;
+        margin-left: 130px;
+        margin-right: 50px;
+
+        .card {
+            border: 1px #68e2fa;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #181818;
+            height: 500px;
+
+            .card-top img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .project-page {
+        .carousel {
+            margin-left: 50px;
+        }
+    }
+}

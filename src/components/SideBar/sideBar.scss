@@ -167,8 +167,10 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin-top: 90px;
             }
-    
+            
+            // wordings for dropdown menu kept constant
             a:after {
                 opacity: 1;
                 position: initial;
