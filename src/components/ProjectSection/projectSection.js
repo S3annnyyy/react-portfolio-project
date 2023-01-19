@@ -66,7 +66,7 @@ const Projects = () => {
                             <h1>{item.title}</h1>
                         </div>
                         <div className='card-bottom'>
-                            <h3>{item.description}</h3>
+                            <p className='desc'>{item.description}</p>
                             <p>{item.stack}</p>
                         </div>
                     </div>
