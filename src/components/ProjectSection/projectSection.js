@@ -63,7 +63,7 @@ const Projects = () => {
                     <div className='card'>
                         <div className='card-top'>
                             <img src={item.image} alt={item.title} />
-                            <h1>{item.title}</h1>
+                            <p>{item.title}</p>
                         </div>
                         <div className='card-bottom'>
                             <p className='desc'>{item.description}</p>

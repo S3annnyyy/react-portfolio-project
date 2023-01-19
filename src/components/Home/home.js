@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Loader } from 'react-loaders'
 import LogoTitle from '../../assets/images/s-logo.png';
 import AnimatedLetters from '../AnimatedLetters/animatedLetters.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './home.scss';
 
 const Home = () => {
@@ -42,7 +44,10 @@ const Home = () => {
                         idx={25} />
                     </h1>
                     <h2>Information Systems Major / Tech & AI Enthusiast / Author</h2>
-                    <Link to="/projects" className='flat-button'>VIEW MY PROJECTS</Link>
+                    <Link to="/project" className='flat-button'>
+                        View My Projects
+                        <FontAwesomeIcon icon={faArrowRight} color="#181818" className='i'/>
+                        </Link>
                 </div>
             </div>
             <Loader type='ball-scale-ripple-multiple'/>

@@ -34,7 +34,7 @@ const Halo = () => {
                xOffset: offSet,
                yOffset: 0.40,
                backgroundColor: "#181818",
-               amplitudeFactor: aF
+               amplitudeFactor: aF,
              })
            );
          }
