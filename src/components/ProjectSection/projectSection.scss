@@ -10,7 +10,7 @@
     .text-zoneP {
         position: absolute;
         left: 13%;
-        top: 5%;
+        top: 1%;
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
@@ -25,27 +25,31 @@
     }
 
     .carousel {
-        margin-top: 5.5%;
+        margin-top: 3.5%;
         margin-left: 6.5%;
         margin-right: 4%;
 
         .card {
             border-radius: 8px;
             overflow: hidden;
-            background-color: #181818;
+            background-color: #282828;
             height: 40%;
             text-align: center;
             font-family: "Coolvetica";
+            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
 
             .card-top img {
                 max-width: 100%;
                 max-height: 100%;
                 object-fit: fill;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .card-top p {
                 margin-top: 20px;
-                padding: 10px;
+                // padding: 10px;
                 color: #fff;
                 font-size: 28px;
             }
@@ -53,9 +57,35 @@
             .card-bottom {
                 .desc {
                     font-size: 18px;
-                    padding-top: -20px;
+                    padding-top: -5px;
                     padding-left: 10px; 
                     padding-right: 10px;
+                    color: #fff;
+                }
+
+                .button-link {
+                    background: #68e2fa;
+                    color: #333;
+                    font-size: 20px;
+                    font-weight: 400;
+                    text-decoration: none;
+                    letter-spacing: 1.5px;
+                    font-family: 'Coolvetica';
+                    padding: 15px 18px;
+                    float: right;
+                    margin-right: 1%;
+                    margin-bottom: .8%;
+                    animation: fadeIn 1s 1,8s backwards;
+                    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
+                    
+                    &:hover {
+                        transform: scale(1.1);
+                        transition-duration: 0.3s;
+                    }
+            
+                    .i {
+                        padding-left: 10px;
+                    }
                 }
             }
         }
@@ -69,7 +99,7 @@
         }
 
         .carousel {
-            margin-top: 20%;
+            margin-top: 10%;
             margin-left: 6%;
             margin-right: 6%;
         }

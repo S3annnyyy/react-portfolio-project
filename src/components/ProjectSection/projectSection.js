@@ -1,4 +1,6 @@
 import { useState, useEffect, React } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import AnimatedLetters from '../AnimatedLetters/animatedLetters.js';
 import "./projectSection.scss";
 import { projectData } from './projectData.js';
@@ -67,7 +69,10 @@ const Projects = () => {
                         </div>
                         <div className='card-bottom'>
                             <p className='desc'>{item.description}</p>
-                            <p>{item.stack}</p>
+                            <a href={item.urlLink} className="button-link" target="_blank">
+                                View Project
+                                <FontAwesomeIcon icon={faArrowRight} color="#181818" className='i'/>
+                            </a>
                         </div>
                     </div>
                 ))}

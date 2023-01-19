@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import HALO from 'vanta/dist/vanta.halo.min'
 import * as THREE from "three";
+import "./halo.scss";
 
 const Halo = () => {
      const [vantaEffect, setVantaEffect] = useState(0);
