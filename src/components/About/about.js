@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loaders';
 import { TextDecrypt } from '../TextDecrypt/textDecrypt';
+import portraitPhoto from '../../assets/images/Me.JPG';
 
 const About = () => {
     const intro1 = "Hi there! I'm Sean, currently a Year 1 undergraduate studying at Singapore Management University majoring in Information Systems. I previously interned at Foodpanda as a Commercial Analyst where I drove the creation of interactive dashboards to provide insights and optimize promotion strategy."
@@ -42,6 +43,9 @@ const About = () => {
                         <FontAwesomeIcon icon={faChevronRight} color="#181818" className='rightA'/>
                         </Link>
                 </div>
+            </div>
+            <div>
+                <img src={portraitPhoto} alt='Portrait Photo' className='portrait'/>
             </div>
         </div>
         <Loader type="ball-scale-ripple-multiple" />
