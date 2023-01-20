@@ -28,12 +28,14 @@ const About = () => {
                         idx={15}
                     />
                 </h1>
-                <p>Intro 1</p>
-                <p>Intro 2</p>
-                <p>Intro 3</p>
+                <div className='intro'>
+                    <p>Intro 1</p>
+                    <p>Intro 2</p>
+                    <p>Intro 3</p>
+                </div>
             </div>
 
-            <div className='stage-cube-cont'>
+            {/* <div className='stage-cube-cont'>
                 <div className='cubespinner'>
                     <div className='face1'><FontAwesomeIcon icon={faAngular} color="#DD0031"/></div>
                     <div className='face2'><FontAwesomeIcon icon={faHtml5} color="#F06529"/></div>
@@ -42,7 +44,7 @@ const About = () => {
                     <div className='face5'><FontAwesomeIcon icon={faJsSquare} color="#EFD81D"/></div>
                     <div className='face6'><FontAwesomeIcon icon={faGitAlt} color="#EC4D28"/></div>
                 </div>
-            </div>
+            </div> */}
         </div>
         <Loader type="ball-scale-ripple-multiple" />
         </>

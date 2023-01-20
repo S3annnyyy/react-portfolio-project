@@ -7,6 +7,7 @@
         transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
+        white-space: nowrap;
     }
     h1 {
         color: #fff;
@@ -70,6 +71,14 @@
             padding: 10px;
             box-sizing: border-box;
             margin-top: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home-page {
+        .text-zone {
+            white-space: normal;
         }
     }
 }
