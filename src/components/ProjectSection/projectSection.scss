@@ -68,24 +68,35 @@
                     color: #333;
                     font-size: 20px;
                     font-weight: 400;
-                    text-decoration: none;
+                    text-decoration-color: transparent;
                     letter-spacing: 1.5px;
                     font-family: 'Coolvetica';
                     padding: 15px 18px;
                     float: right;
-                    margin-right: 1%;
-                    margin-bottom: .8%;
+                    // margin-right: 1%;
+                    // margin-bottom: 1.1%;
                     animation: fadeIn 1s 1,8s backwards;
                     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%);
                     
                     &:hover {
-                        transform: scale(1.1);
-                        transition-duration: 0.3s;
+                        // transform: scale(1.1);
+                        text-decoration-color: #181818;
+                        text-decoration-thickness: 2px;
+                        transition-duration: 1s;
                     }
             
                     .i {
                         padding-left: 10px;
                     }
+                }
+
+                .stack {
+                    float: left;
+                    height: auto; 
+                    width: auto; 
+                    max-width: 50px; 
+                    max-height: 50px;
+                    padding-left: 3%;
                 }
             }
         }

@@ -7,6 +7,7 @@ import { projectData } from './projectData.js';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Loader } from 'react-loaders';
 
 const Projects = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
@@ -69,15 +70,17 @@ const Projects = () => {
                         </div>
                         <div className='card-bottom'>
                             <p className='desc'>{item.description}</p>
-                            <a href={item.urlLink} className="button-link" target="_blank">
+                            <a href={item.urlLink} className="button-link" target="_blank" rel="noreferrer">
                                 View Project
                                 <FontAwesomeIcon icon={faArrowRight} color="#181818" className='i'/>
                             </a>
+                            <img src={item.stack} className='stack'/>
                         </div>
                     </div>
                 ))}
             </Slider>
             </div>
+            <Loader type='ball-scale-ripple-multiple'/>
         </div>
     )
 }
