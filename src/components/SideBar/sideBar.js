@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './sideBar.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUser, faEnvelope, faCode } from '@fortawesome/free-solid-svg-icons'
@@ -12,10 +12,7 @@ const SideBar = () => {
 
     return (
         <div className='nav-bar'>
-        <Link className='logo' to="/">
-            {/* <a className='logoS'><FontAwesomeIcon icon={faS} color="#4d4d4e" /></a> */}
-        </Link>
-        <a href='#' className='toggle-button' onClick={() => setShowNav(true)}>
+        <a href='javascript:void(0)' className='toggle-button' onClick={() => setShowNav(true)}>
             <span className='bar'></span>
             <span className='bar2'></span>
             <span className='bar'></span>

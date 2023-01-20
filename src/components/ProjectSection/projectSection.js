@@ -74,7 +74,7 @@ const Projects = () => {
                                 View Project
                                 <FontAwesomeIcon icon={faArrowRight} color="#181818" className='i'/>
                             </a>
-                            <img src={item.stack} className='stack'/>
+                            <img src={item.stack} alt={item.title} className='stack'/>
                         </div>
                     </div>
                 ))}
