@@ -1,11 +1,15 @@
-import AnimatedLetters from '../AnimatedLetters/animatedLetters'
-import './about.scss'
-import { useEffect, useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGitAlt, faJsSquare, faAngular, faHtml5, faReact, faCss3 } from '@fortawesome/free-brands-svg-icons'
-import Loader from 'react-loaders'
+import AnimatedLetters from '../AnimatedLetters/animatedLetters';
+import './about.scss';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight, faright } from '@fortawesome/free-solid-svg-icons';
+import Loader from 'react-loaders';
+import { TextDecrypt } from '../TextDecrypt/textDecrypt';
 
 const About = () => {
+    const intro1 = "Hi there! I'm Sean, currently a Year 1 undergraduate studying at Singapore Management University majoring in Information Systems. I previously interned at Foodpanda as a Commercial Analyst where I drove the creation of interactive dashboards to provide insights and optimize promotion strategy."
+    const intro2 = "In my free time, I like to increase my technical knowledge through personal projects and participating in hackathons. I’m always down for hearing about new projects, so feel free to drop me a line."
     const [letterClass, setLetterClass] = useState('text-animate')
 
     useEffect(() => {
@@ -29,22 +33,16 @@ const About = () => {
                     />
                 </h1>
                 <div className='intro'>
-                    <p>Intro 1</p>
-                    <p>Intro 2</p>
-                    <p>Intro 3</p>
+                    <p>
+                        {`${intro1}`}
+                        <TextDecrypt text={`${intro2}`}/>
+                    </p>
+                    <Link to="/contact" className='flat-button'>
+                        Send me a message
+                        <FontAwesomeIcon icon={faChevronRight} color="#181818" className='rightA'/>
+                        </Link>
                 </div>
             </div>
-
-            {/* <div className='stage-cube-cont'>
-                <div className='cubespinner'>
-                    <div className='face1'><FontAwesomeIcon icon={faAngular} color="#DD0031"/></div>
-                    <div className='face2'><FontAwesomeIcon icon={faHtml5} color="#F06529"/></div>
-                    <div className='face3'><FontAwesomeIcon icon={faCss3} color="#28A4D9"/></div>
-                    <div className='face4'><FontAwesomeIcon icon={faReact} color="#5ED4F4"/></div>
-                    <div className='face5'><FontAwesomeIcon icon={faJsSquare} color="#EFD81D"/></div>
-                    <div className='face6'><FontAwesomeIcon icon={faGitAlt} color="#EC4D28"/></div>
-                </div>
-            </div> */}
         </div>
         <Loader type="ball-scale-ripple-multiple" />
         </>
