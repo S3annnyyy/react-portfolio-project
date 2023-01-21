@@ -35,3 +35,49 @@
         background: transparent;
     }
 }
+
+.form-group{
+ 
+    position: relative;
+    font-size: 30px;
+    color: #666;
+    &+&{
+      margin-top: 30px;
+    }
+    
+    .form-label{
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 5px;
+      transition: .3s;
+      
+    }
+    
+    .form-control{
+      width: 100%;
+      position: relative;
+      z-index: 3;
+      height: 35px;
+      background: none;
+      border:none;
+      padding: 5px 0;
+      transition: .3s;
+      border-bottom: 1px solid #777;
+      color: #555;
+      &:invalid{outline: none;}
+      
+      &:focus , &:valid{
+        outline: none;
+  
+        box-shadow: 0 1px #68e2fa;
+        border-color:#68e2fa;
+        + .form-label{
+          font-size: 25px;
+          color: #68e2fa;
+          transform: translateY(-15px);
+        }
+      }
+    }
+    
+  }

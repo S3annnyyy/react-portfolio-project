@@ -32,20 +32,18 @@ const Contact = () => {
                 </div>
                 <div className='contact-form'>
                     <form>
-                        <ul>
-                            <li>
-                                <input type="text" name="name" placeholder="Your name" required/>
-                            </li>
-                            <li>
-                                <input type="email" name="email" placeholder="Your email" required/>
-                            </li>
-                            <li>
-                                <textarea name="message" placeholder='Say Hello!'required />
-                            </li>
-                            <li>
-                                <input type="submit" className='submit-button' value="Send message" />
-                            </li>
-                        </ul>
+                        <div className='form-group'>
+                            <input type="text" required="required" className='form-control' name='name'/>
+                            <label className='form-label'>Your name</label>
+                        </div>
+                        <div className='form-group'>
+                            <input type="text" required="required" className='form-control' name='email'/>
+                            <label className='form-label'>Your email</label>
+                        </div>
+                        <div className='form-group'>
+                            <input type="text" required="required" className='form-control' name='message'/>
+                            <label className='form-label'>Your message</label>
+                        </div>
                     </form>
                 </div>
             </div>
