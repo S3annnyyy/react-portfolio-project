@@ -29,8 +29,7 @@ const Contact = () => {
                         />
                     </h1>
                     <div className='divider'></div>
-                </div>
-                <div className='contact-form'>
+                    <div className='contact-form'>
                     <form>
                         <div className='form-group'>
                             <input type="text" required="required" className='form-control' name='name'/>
@@ -45,6 +44,7 @@ const Contact = () => {
                             <label className='form-label'>Your message</label>
                         </div>
                     </form>
+                </div>
                 </div>
             </div>
             <Loader type="ball-scale-ripple-multiple" />
