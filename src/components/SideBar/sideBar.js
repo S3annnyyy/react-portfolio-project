@@ -12,7 +12,7 @@ const SideBar = () => {
 
     return (
         <div className='nav-bar'>
-        <a href='javascript:void(0)' className='toggle-button' onClick={() => setShowNav(true)}>
+        <a href='#' className='toggle-button' onClick={() => showNav ? setShowNav(false): setShowNav(true)}>
             <span className='bar'></span>
             <span className='bar2'></span>
             <span className='bar'></span>
@@ -31,7 +31,7 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
             </NavLink>
         </nav>
-        <ul>
+        <ul className={showNav ? 'mobile-show2': ''}>
             <li>
                 <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/seanyckang/'>
                     <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />

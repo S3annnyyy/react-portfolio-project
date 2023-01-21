@@ -126,12 +126,13 @@
         li {
             a {
                 padding: 10px 0;
-                display: block;
+                display: inline;
                 font-size: 30px;
                 line-height: 16px;
 
                 &:hover svg {
                     color: #68e2fa;
+                    transition: 0.3s;
                 }
             }
         }
@@ -139,7 +140,8 @@
 }
 
 // Controlled by toggle-button class, dropdown menu shown only when button clicked
-@media screen and (max-width: 800px) {
+// SHOWN ONLY ON MOBILE SCREEN
+@media screen and (max-width: 800px) and (max-height: 900px) {
     .toggle-button {
         display: flex;
     }
@@ -162,7 +164,7 @@
             top: 0;
             left: 0;
             margin: 0;
-
+            
             a {
                 display: flex;
                 justify-content: center;
@@ -183,6 +185,21 @@
             }
 
             &.mobile-show {
+                display: block;
+            }
+        }
+
+        ul {
+            z-index: 2;
+            bottom: 12%;
+            position: absolute;
+
+            li {
+                display: inline;
+                padding: 10%;
+
+            }
+            &.mobile-show2 {
                 display: block;
             }
         }
