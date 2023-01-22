@@ -1,7 +1,6 @@
 import './contactPage.scss';
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
-import { TextDecrypt } from '../TextDecrypt/textDecrypt';
 import AnimatedLetters from '../AnimatedLetters/animatedLetters.js';
 
 const Contact = () => {
@@ -43,6 +42,13 @@ const Contact = () => {
                             <input type="text" required="required" className='form-control' name='message'/>
                             <label className='form-label'>Your message</label>
                         </div>
+                        &nbsp; <br/>
+                        <button type='submit' className='submit-button' name='submit'>
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2 .01 7z"/>
+                            </svg>
+                        Send message
+                        </button>
                     </form>
                 </div>
                 </div>

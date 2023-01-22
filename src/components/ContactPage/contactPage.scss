@@ -85,6 +85,30 @@
   }
 }
 
+// styling for submit button
+.submit-button {
+  padding:15px 18px; 
+  letter-spacing: 1.5px;
+  font-family: 'Coolvetica';
+  font-size: 20px;
+  font-weight: 400;
+  background: #68e2fa;
+  color: #333;
+  border: 1px solid #68e2fa;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+  cursor:pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+  }
+
+  svg {
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+}
+
 @media screen and (max-width:1200px) {
   .container-contact-page {
     .text-zone {
@@ -92,6 +116,9 @@
       width: 70%;
       margin-left: 2%;
     }
+  }
+  .form-group {
+    font-size: 21px;
   }
 }
 
@@ -102,6 +129,10 @@
       width: 80%;
       margin-left: -7%;
     }
+  }
+
+  .form-group {
+    font-size: 18px;
   }
 }
 
