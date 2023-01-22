@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Loader } from 'react-loaders'
 import LogoTitle from '../../assets/images/s-logo.png';
-import AnimatedLetters from '../AnimatedLetters/animatedLetters.js';
+import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import './home.scss';

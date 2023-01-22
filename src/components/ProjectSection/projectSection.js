@@ -1,7 +1,7 @@
 import { useState, useEffect, React } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import AnimatedLetters from '../AnimatedLetters/animatedLetters.js';
+import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters.js';
 import "./projectSection.scss";
 import { projectData } from './projectData.js';
 import Slider from 'react-slick';

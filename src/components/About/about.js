@@ -1,11 +1,11 @@
-import AnimatedLetters from '../AnimatedLetters/animatedLetters';
+import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters';
 import './about.scss';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loaders';
-import { TextDecrypt } from '../TextDecrypt/textDecrypt';
+import { TextDecrypt } from '../Animations/TextDecrypt/textDecrypt';
 import portraitPhoto from '../../assets/images/Me.JPG';
 
 const About = () => {

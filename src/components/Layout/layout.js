@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import SideBar from '../SideBar/sideBar.js'
 import './layout.scss';
-import Halo from '../vanta/halo.js'
+import Halo from '../Animations/vanta/halo.js'
 
 const Layout = () => {
     return (

@@ -1,7 +1,7 @@
 import './contactPage.scss';
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
-import AnimatedLetters from '../AnimatedLetters/animatedLetters.js';
+import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters.js';
 
 const Contact = () => {
 
