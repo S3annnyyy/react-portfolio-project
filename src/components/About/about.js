@@ -10,7 +10,7 @@ import portraitPhoto from '../../assets/images/Me.JPG';
 
 const About = () => {
     const intro1 = "Hi there! I'm Sean, currently a Year 1 undergraduate studying at Singapore Management University majoring in Information Systems. I previously interned at Foodpanda as a Commercial Analyst where I drove the creation of interactive dashboards to provide insights and optimize promotion strategy."
-    const intro2 = "In my free time, I like to increase my technical knowledge through personal projects and participating in hackathons. I’m always down for hearing about new projects, so feel free to drop me a line."
+    const intro2 = "In my free time, I like to increase my technical knowledge through personal projects and participating in hackathons. I’m always down to hear more about new projects or internship opportunities, so feel free to drop me a message!"
     const [letterClass, setLetterClass] = useState('text-animate')
 
     useEffect(() => {
