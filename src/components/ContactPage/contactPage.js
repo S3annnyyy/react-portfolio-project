@@ -51,15 +51,15 @@ const Contact = () => {
                     <div className='contact-form'>
                     <form ref={refform} onSubmit={sendEmail}>
                         <div className='form-group'>
-                            <input type="text" required="required" className='form-control' name='name'/>
+                            <input type="text" placeholder=" " required="required" className='form-control' name='name'/>
                             <label className='form-label'>Your name</label>
                         </div>
                         <div className='form-group'>
-                            <input type="text" required="required" className='form-control' name='email'/>
+                            <input type="email" placeholder=" " required="required" className='form-control' name='email'/>
                             <label className='form-label'>Your email</label>
                         </div>
                         <div className='form-group'>
-                            <input type="text" required="required" className='form-control' name='message'/>
+                            <input type="text" placeholder=" " required="required" className='form-control' name='message'/>
                             <label className='form-label'>Your message</label>
                         </div>
                         &nbsp; <br/>
