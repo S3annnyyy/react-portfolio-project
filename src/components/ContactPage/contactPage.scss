@@ -153,3 +153,12 @@
     }
   }
 }
+
+@media screen and (max-width:400px) {
+  .container-contact-page {
+    overflow-wrap: break-word;
+    .text-zone {
+      margin-top: 43%;
+    }
+  }
+}
