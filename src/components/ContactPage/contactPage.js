@@ -6,6 +6,7 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
 
+    // Text animation
     const [letterClass, setLetterClass] = useState('text-animate')
 
     useEffect(() => {
@@ -17,16 +18,19 @@ const Contact = () => {
                 }
     }, [])
 
+    // emailJS function 
     const refform = useRef()
 
     function sendEmail(e) {
         e.preventDefault();
+        console.log(input_val);
+        console.log("Message successfully sent");
         emailjs
             .sendForm(
-                '<YOUR_SERVICE_ID', 
-                '<TEMPLATE_ID>', 
+                'service_m5ystnf', 
+                'template_fg7xyk4', 
                 refform.current, 
-                '<YOUR_API_KEY')
+                'LaiNhKO13bmNuth9H')
             .then(
                 (result) => {
                 alert(`Message successfully sent! ${result.text}`)
@@ -34,6 +38,24 @@ const Contact = () => {
             }, (error) => {
                 alert(`Message failed to send: ${error.text}. Please try again.`)
             });
+    }
+
+    // Handling form submissions and parsing to MongoDB backend using express and mongoose
+    const [input_val, setInput] = useState ({
+        name: "",
+        email: "",
+        message: "",
+    })
+
+    function handleSubmit(e) {
+        const {name, value} = e.target;
+
+        setInput(prevInput => {
+            return {
+                ...prevInput,
+                [name]: value
+            }
+        })
     }
 
     return (
@@ -51,15 +73,15 @@ const Contact = () => {
                     <div className='contact-form'>
                     <form ref={refform} onSubmit={sendEmail}>
                         <div className='form-group'>
-                            <input type="text" placeholder=" " required="required" className='form-control' name='name'/>
+                            <input type="text" placeholder=" " required="required" className='form-control' name='name' value={input_val.name} onChange={handleSubmit}/>
                             <label className='form-label'>Your name</label>
                         </div>
                         <div className='form-group'>
-                            <input type="email" placeholder=" " required="required" className='form-control' name='email'/>
+                            <input type="email" placeholder=" " required="required" className='form-control' name='email' value={input_val.email} onChange={handleSubmit}/>
                             <label className='form-label'>Your email</label>
                         </div>
                         <div className='form-group'>
-                            <input type="text" placeholder=" " required="required" className='form-control' name='message'/>
+                            <input type="text" placeholder=" " required="required" className='form-control' name='message' value={input_val.message} onChange={handleSubmit}/>
                             <label className='form-label'>Your message</label>
                         </div>
                         &nbsp; <br/>
