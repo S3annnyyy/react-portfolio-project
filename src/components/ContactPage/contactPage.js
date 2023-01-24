@@ -35,10 +35,10 @@ const Contact = () => {
         console.log("Message successfully sent");
         emailjs
             .sendForm(
-                'service_m5ystnf', 
-                'template_fg7xyk4', 
+                '<SERVICE ID>', 
+                '<TEMPLATE ID>', 
                 refform.current, 
-                'LaiNhKO13bmNuth9H')
+                '<ENV ID>')
             .then(
                 (result) => {
                 alert(`Message successfully sent! ${result.text}`)
