@@ -41,6 +41,7 @@ const Contact = () => {
     }
 
     // Handling form submissions and parsing to MongoDB backend using express and mongoose
+    // Checking of input_val is parked under sendEmail function to prevent onsubmit|onclick function call conflict
     const [input_val, setInput] = useState ({
         name: "",
         email: "",
