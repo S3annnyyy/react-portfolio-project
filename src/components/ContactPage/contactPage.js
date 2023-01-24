@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters.js';
 import emailjs from '@emailjs/browser';
+import axios from 'axios';
 
 const Contact = () => {
 
@@ -23,7 +24,14 @@ const Contact = () => {
 
     function sendEmail(e) {
         e.preventDefault();
-        console.log(input_val);
+        // Axios post method
+        console.log(input_val)
+        const newUserData = {
+            name: input_val.name,
+            email: input_val.email,
+            message: input_val.message
+        }
+        axios.post('http://localhost:27017/create', newUserData)
         console.log("Message successfully sent");
         emailjs
             .sendForm(
@@ -41,7 +49,7 @@ const Contact = () => {
     }
 
     // Handling form submissions and parsing to MongoDB backend using express and mongoose
-    // Checking of input_val is parked under sendEmail function to prevent onsubmit|onclick function call conflict
+    // Axios post method is parked under sendEmail function to prevent onsubmit|onclick function call conflict
     const [input_val, setInput] = useState ({
         name: "",
         email: "",
