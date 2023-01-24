@@ -1,7 +1,24 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
-const port = process.env.port ?? 8080;
+const mongoose = require('mongoose');
+const port = process.env.port ?? 27017;
+
+// Connection to mongoose
+const connectDB = async () => {
+    mongoose.connect("mongodb://127.0.0.1:27017/portfolio-msgs")
+    // Define schema
+    const userDataSchema = new mongoose.Schema({
+        name: String,
+        address: String,
+        message: String
+    });
+    const userData = mongoose.model("userData", userDataSchema, "userData");
+    const data = await userData.find();
+    console.warn(data)
+}
+
+connectDB();
 
 // Middleware
 app.use(express.urlencoded({extended: true}));
