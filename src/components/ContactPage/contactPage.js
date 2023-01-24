@@ -35,10 +35,10 @@ const Contact = () => {
         console.log("Message successfully sent");
         emailjs
             .sendForm(
-                '<SERVICE ID>', 
-                '<TEMPLATE ID>', 
+                process.env.REACT_APP_SERVICE_ID, 
+                process.env.REACT_APP_TEMPLATE_ID, 
                 refform.current, 
-                '<ENV ID>')
+                process.env.REACT_APP_API_KEY)
             .then(
                 (result) => {
                 alert(`Message successfully sent! ${result.text}`)
