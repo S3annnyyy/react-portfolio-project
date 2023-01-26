@@ -169,7 +169,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 23%;
+                margin-top: 21%;
             }
             
             // wordings for dropdown menu kept constant
@@ -202,6 +202,14 @@
             &.mobile-show2 {
                 display: block;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .nav-bar {
+        ul {
+            bottom: 8%;
         }
     }
 }

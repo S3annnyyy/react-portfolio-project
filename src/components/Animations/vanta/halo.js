@@ -10,10 +10,10 @@ const Halo = () => {
      let offSet = 0.35
      let aF = 0
     
-     if (window.innerWidth <= 420) {
+     if (window.innerWidth <= 430) {
       haloSize = 1.2;
-      offSet = 1;
-      aF = 3;
+      offSet = -0.1;
+      aF = 0;
      };
  
      useEffect(() => {
