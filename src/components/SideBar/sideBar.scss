@@ -169,7 +169,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                margin-top: 90px;
+                margin-top: 23%;
             }
             
             // wordings for dropdown menu kept constant
@@ -177,7 +177,7 @@
                 opacity: 1;
                 position: initial;
                 width: auto;
-                margin-left: 10px;
+                margin-left: 10px;  //spacing b/w icon & page name
             }
             // prevents icon from disappearing upon hover due to function meant for desktop use
             a svg {
