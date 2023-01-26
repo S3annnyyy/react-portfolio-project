@@ -10,9 +10,9 @@ const Halo = () => {
      let offSet = 0.35
      let aF = 0
     
-     if (window.innerWidth <= 1024) {
+     if (window.innerWidth <= 420) {
       haloSize = 1.2;
-      offSet = -0.1;
+      offSet = 1;
       aF = 3;
      };
  

@@ -45,3 +45,13 @@ input, textarea {
 body {
   overflow-x: hidden;
 }
+
+@media screen and (max-width: 420px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+  }
+}

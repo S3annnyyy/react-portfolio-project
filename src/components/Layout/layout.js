@@ -5,9 +5,10 @@ import Halo from '../Animations/vanta/halo.js'
 
 const Layout = () => {
     return (
-    // Test layout
     <div className="App">
-        <Halo />
+        <div className='halo-element'>
+            <Halo />
+        </div>
         <SideBar />
             <div className="page">
                 <Outlet />
