@@ -1,8 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# Personal Porfolio Project
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/67400060/215267281-21b9fbe5-f7d0-4f4d-8346-c9070f4cfe3b.gif)
 
 In the project directory, you can run:
 
