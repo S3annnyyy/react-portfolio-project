@@ -42,12 +42,10 @@ const Halo = () => {
          return () => {
            if (vantaEffect) vantaEffect.destroy();
          };
-       }, [vantaEffect]);
+       }, [vantaEffect, aF, offSet, haloSize]);
     
     return (
-        <div ref={vantaRef} className='halo-background'>
-        <p style={{ color: "#68e2fa", background: "#18181818"}}></p>
-        </div>
+        <div ref={vantaRef} className='halo-background'></div>
     )
 }
 
