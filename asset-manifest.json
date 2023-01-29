@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/react-portfolio-project/static/css/main.a8606983.css",
-    "main.js": "/react-portfolio-project/static/js/main.1e22bf28.js",
-    "static/js/787.5da09daf.chunk.js": "/react-portfolio-project/static/js/787.5da09daf.chunk.js",
-    "static/media/mask.gif": "/react-portfolio-project/static/media/mask.930bd3a2da8f9061fe39.gif",
-    "static/media/Me.JPG": "/react-portfolio-project/static/media/Me.a718dbd5ce0d4fac1f64.JPG",
-    "static/media/project2.png": "/react-portfolio-project/static/media/project2.95da6cbc812fed64af60.png",
-    "static/media/googleIgnite.png": "/react-portfolio-project/static/media/googleIgnite.40cac7354f8ba7f836a1.png",
-    "static/media/project1.png": "/react-portfolio-project/static/media/project1.92e458256cc30a5909da.png",
-    "static/media/s-logo.png": "/react-portfolio-project/static/media/s-logo.79a9888b8f7556be0fb3.png",
-    "static/media/helvetica-neu.ttf": "/react-portfolio-project/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
-    "static/media/LaBelleAurore.woff2": "/react-portfolio-project/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
-    "static/media/gotham-book.woff2": "/react-portfolio-project/static/media/gotham-book.87157097dc9ececf1c70.woff2",
-    "static/media/CoolveticaRg-Regular.woff2": "/react-portfolio-project/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
-    "static/media/slick.svg": "/react-portfolio-project/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/react-portfolio-project/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/react-portfolio-project/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/react-portfolio-project/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/react-portfolio-project/index.html",
-    "main.a8606983.css.map": "/react-portfolio-project/static/css/main.a8606983.css.map",
-    "main.1e22bf28.js.map": "/react-portfolio-project/static/js/main.1e22bf28.js.map",
-    "787.5da09daf.chunk.js.map": "/react-portfolio-project/static/js/787.5da09daf.chunk.js.map"
+    "main.css": "/static/css/main.099a092d.css",
+    "main.js": "/static/js/main.a0c5d788.js",
+    "static/js/787.5da09daf.chunk.js": "/static/js/787.5da09daf.chunk.js",
+    "static/media/mask.gif": "/static/media/mask.930bd3a2da8f9061fe39.gif",
+    "static/media/Me.JPG": "/static/media/Me.a718dbd5ce0d4fac1f64.JPG",
+    "static/media/project2.png": "/static/media/project2.95da6cbc812fed64af60.png",
+    "static/media/googleIgnite.png": "/static/media/googleIgnite.40cac7354f8ba7f836a1.png",
+    "static/media/project1.png": "/static/media/project1.92e458256cc30a5909da.png",
+    "static/media/s-logo.png": "/static/media/s-logo.79a9888b8f7556be0fb3.png",
+    "static/media/helvetica-neu.ttf": "/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "static/media/LaBelleAurore.woff2": "/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
+    "static/media/gotham-book.woff2": "/static/media/gotham-book.87157097dc9ececf1c70.woff2",
+    "static/media/CoolveticaRg-Regular.woff2": "/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.099a092d.css.map": "/static/css/main.099a092d.css.map",
+    "main.a0c5d788.js.map": "/static/js/main.a0c5d788.js.map",
+    "787.5da09daf.chunk.js.map": "/static/js/787.5da09daf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8606983.css",
-    "static/js/main.1e22bf28.js"
+    "static/css/main.099a092d.css",
+    "static/js/main.a0c5d788.js"
   ]
 }
