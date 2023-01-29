@@ -7,10 +7,12 @@ router.route("/create").post((req, res) => {
     const name = req.body.name
     const email = req.body.email
     const message = req.body.message
+    const date = new Date();
     const newUserData = new userData({
         name,
         email,
-        message
+        message,
+        date
     })
 
     newUserData.save();

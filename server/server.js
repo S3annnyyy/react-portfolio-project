@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(cors())
 
-// Connection to mongoose
+// Connection to mongodb
 mongoose.connect("mongodb://127.0.0.1:27017/portfolio-msgs")
 
 // Route
@@ -23,5 +23,4 @@ app.use("/", require("../server/route.js"))
 app.listen(port, (err) => {
         if (err) console.error(err);
         console.log(`Express Server listening on port ${port}`)
-
     })

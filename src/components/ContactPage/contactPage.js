@@ -24,17 +24,20 @@ const Contact = () => {
 
     function sendEmail(e) {
         e.preventDefault();
+
         // Axios post method
         console.log(input_val)
         const newUserData = {
             name: input_val.name,
             email: input_val.email,
-            message: input_val.message
+            message: input_val.message,
         }
+
         axios.post('http://localhost:27017/create', newUserData)
         console.log("Message successfully sent");
         emailjs
             .sendForm(
+                // API keys required for email js
                 process.env.REACT_APP_SERVICE_ID, 
                 process.env.REACT_APP_TEMPLATE_ID, 
                 refform.current, 
