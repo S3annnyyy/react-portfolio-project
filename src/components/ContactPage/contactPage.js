@@ -4,6 +4,7 @@ import Loader from 'react-loaders';
 import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters.js';
 import emailjs from '@emailjs/browser';
 import axios from 'axios';
+import Spinner from 'react-svg-spinner';
 
 const Contact = () => {
 
@@ -24,7 +25,8 @@ const Contact = () => {
 
     function sendEmail(e) {
         e.preventDefault();
-
+        // Submit button loading animation
+        setLoading(true)
         // Axios post method
         console.log(input_val)
         const newUserData = {
@@ -44,6 +46,7 @@ const Contact = () => {
                 process.env.REACT_APP_API_KEY)
             .then(
                 (result) => {
+                setLoading(false)
                 alert(`Message successfully sent! ${result.text}`)
                 window.location.reload(false)
             }, (error) => {
@@ -70,6 +73,10 @@ const Contact = () => {
         })
     }
 
+    // Loading button
+    const [loading, setLoading] = useState(false);
+
+
     return (
         <>
             <div className='container-contact-page'>
@@ -83,7 +90,7 @@ const Contact = () => {
                     </h1>
                     <div className='divider'></div>
                     <div className='contact-form'>
-                    <form ref={refform} onSubmit={sendEmail}>
+                    <form ref={refform} onSubmit={sendEmail} autoComplete="off">
                         <div className='form-group'>
                             <input type="text" placeholder=" " required="required" className='form-control' name='name' value={input_val.name} onChange={handleSubmit}/>
                             <label className='form-label'>Your name</label>
@@ -98,10 +105,14 @@ const Contact = () => {
                         </div>
                         &nbsp; <br/>
                         <button type='submit' className='submit-button' name='submit'>
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2 .01 7z"/>
-                            </svg>
-                        Send message
+                            {loading ? (<div style={{padding: "0 75px 0 75px"}}><Spinner/></div>):
+                            <>
+                                <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2 .01 7z"/>
+                                </svg>
+                                <span>Send message</span>
+                            </>
+                            }
                         </button>
                     </form>
                 </div>
