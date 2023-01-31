@@ -9,7 +9,6 @@ import { useState } from 'react'
 const SideBar = () => {
     const [showNav, setShowNav] = useState(false);
 
-
     return (
         <div className='nav-bar'>
         <a href='#' className='toggle-button' onClick={() => showNav ? setShowNav(false): setShowNav(true)}>

@@ -7,9 +7,12 @@ import axios from 'axios';
 import Spinner from 'react-svg-spinner';
 
 const Contact = () => {
-
-    // Text animation
-    const [letterClass, setLetterClass] = useState('text-animate')
+    // Handling form submissions and parsing to MongoDB backend using express and mongoose
+    // Axios post method is parked under sendEmail function to prevent onsubmit|onclick function call conflict
+    const [letterClass, setLetterClass] = useState('text-animate');
+    const refform = useRef();
+    const [input_val, setInput] = useState ({name: "", email: "", message: ""});
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         let timeoutId = setTimeout(() => {
@@ -17,24 +20,19 @@ const Contact = () => {
         }, 3000)
         return () => {
                     clearTimeout(timeoutId)
-                }
-    }, [])
+                };
+    }, []);
 
-    // emailJS function 
-    const refform = useRef()
+    const handleSubmit = (e) => {
+        const { name, value } = e.target;
+        setInput(prevInput => ({ ...prevInput, [name]: value }));
+      };
 
     function sendEmail(e) {
         e.preventDefault();
-        // Submit button loading animation
-        setLoading(true)
-        // Axios post method
-        console.log(input_val)
-        const newUserData = {
-            name: input_val.name,
-            email: input_val.email,
-            message: input_val.message,
-        }
-
+        setLoading(true)  // Submit button loading animation
+        console.log(input_val) // Axios post method
+        const newUserData = {name: input_val.name, email: input_val.email, message: input_val.message}
         axios.post('http://localhost:27017/create', newUserData)
         console.log("Message successfully sent");
         emailjs
@@ -52,41 +50,14 @@ const Contact = () => {
             }, (error) => {
                 alert(`Message failed to send: ${error.text}. Please try again.`)
             });
-    }
-
-    // Handling form submissions and parsing to MongoDB backend using express and mongoose
-    // Axios post method is parked under sendEmail function to prevent onsubmit|onclick function call conflict
-    const [input_val, setInput] = useState ({
-        name: "",
-        email: "",
-        message: "",
-    })
-
-    function handleSubmit(e) {
-        const {name, value} = e.target;
-
-        setInput(prevInput => {
-            return {
-                ...prevInput,
-                [name]: value
-            }
-        })
-    }
-
-    // Loading button
-    const [loading, setLoading] = useState(false);
-
+    };
 
     return (
         <>
             <div className='container-contact-page'>
                 <div className='text-zone'>
                     <h1>
-                        <AnimatedLetters
-                            letterClass={letterClass}
-                            strArray={['S', 'a', 'y', ' ', 'h',  'e', 'l', 'l', 'o']}
-                            idx={15}
-                        />
+                        <AnimatedLetters letterClass={letterClass} strArray={['S', 'a', 'y', ' ', 'h',  'e', 'l', 'l', 'o']} idx={15}/>
                     </h1>
                     <div className='divider'></div>
                     <div className='contact-form'>

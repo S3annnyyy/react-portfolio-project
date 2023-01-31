@@ -1,10 +1,8 @@
 // 1st level of CSS styling found in layout.scss 
 .container-contact-page {
-
   .text-zone {
     margin-top: 10%;
   }
-
   .divider {
         width: 100%;
         height: 50px;
@@ -14,18 +12,15 @@
       animation: fadeInUp 2s 2s;
       animation-fill-mode: forwards;
     }
-
   .contact-form {
     margin-top: 3%;
     max-width: 100%;
     opacity: 0;
     animation: fadeInUp 1s 2s;
     animation-fill-mode: forwards;
-
     ul {
         padding: 0;
         margin: 0;
-
         li {
             padding: 0;
             margin: 0;
@@ -38,25 +33,21 @@
         }
     }
   }
-
-.form-group{
+.form-group {
   position: relative;
   font-size: 25px;
   font-family: "Gotham Book";
   color: #666;
-  &+&{
+  &+& {
     margin-top: 30px;
   }
-  
-  .form-label{
+  .form-label {
     position: absolute;
     z-index: 1;
     left: 0;
     top: 5px;
     transition: .3s;
-    
   }
-  
   .form-control{
     width: 100%;
     position: relative;
@@ -81,7 +72,6 @@
         transform: translateY(-15px);
       }
     }
-
     &:focus, &:valid{
       outline: none;
       box-shadow: 0 1px #68e2fa;
@@ -94,7 +84,6 @@
     }
   }
 }
-
 // styling for submit button
 .submit-button {
   padding: 15px 18px; 
@@ -131,7 +120,6 @@
     font-size: 21px;
   }
 }
-
 @media screen and (max-width:800px) {
   .container-contact-page {
     .text-zone {
@@ -140,12 +128,10 @@
       margin-left: -7%;
     }
   }
-
   .form-group {
     font-size: 18px;
   }
 }
-
 @media screen and (max-width:500px) {
   .container-contact-page {
     .text-zone {
@@ -153,7 +139,6 @@
     }
   }
 }
-
 @media screen and (max-width:420px) {
   .container-contact-page {
     overflow-wrap: break-word;

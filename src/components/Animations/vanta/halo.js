@@ -4,18 +4,11 @@ import * as THREE from "three";
 import "./halo.scss";
 
 const Halo = () => {
-     const [vantaEffect, setVantaEffect] = useState(0);
-     const vantaRef = useRef(null);
-     let haloSize = 4.0;
-     let offSet = 0.35
-     let aF = 0
+    const [vantaEffect, setVantaEffect] = useState(0);
+    const vantaRef = useRef(null);
+    let haloSize = window.innerWidth > 430 ? 4.0 : 1.2;
+    let offSet = window.innerWidth > 430 ? 0.35 : -0.1;
     
-     if (window.innerWidth <= 430) {
-      haloSize = 1.2;
-      offSet = -0.1;
-      aF = 0;
-     };
- 
      useEffect(() => {
          if (!vantaEffect) {
            setVantaEffect(
@@ -35,14 +28,14 @@ const Halo = () => {
                xOffset: offSet,
                yOffset: 0.40,
                backgroundColor: "#181818",
-               amplitudeFactor: aF,
+               amplitudeFactor: 0,
              })
            );
          }
          return () => {
            if (vantaEffect) vantaEffect.destroy();
          };
-       }, [vantaEffect, aF, offSet, haloSize]);
+       }, [vantaEffect, offSet, haloSize]);
     
     return (
         <div ref={vantaRef} className='halo-background'></div>
