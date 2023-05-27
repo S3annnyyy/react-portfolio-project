@@ -144,10 +144,12 @@
 @media screen and (max-width: 800px) and (max-height: 900px) {
     .toggle-button {
         display: flex;
+        position: fixed;
     }
     .nav-bar {
         background-color: transparent;
         position: initial;
+        // margin-left: 80%;
         height: auto;
         min-height: auto;
 
@@ -192,7 +194,7 @@
         ul {
             z-index: 2;
             bottom: 12%;
-            position: absolute;
+            position: fixed;
 
             li {
                 display: inline;
