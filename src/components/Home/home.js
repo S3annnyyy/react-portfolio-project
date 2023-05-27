@@ -10,8 +10,8 @@ import './home.scss';
 const Home = () => {
     const [letterClass, setLetterClass] = useState('text-animate')
     const introArray = "Hi there!".split()
-    const nameArray = ['e', 'a', 'n', '!']
-    const jobArray = ['F', 'r', 'e', 's', 'h', 'm', 'a', 'n', ' ', 'a', 't', ' ', 'S', 'M', 'U', '.']
+    const nameArray = "ean!".split("")
+    const jobArray = "Sophomore at SMU.".split("")
 
     useEffect(() => {
         let timeoutId = setTimeout(() => {
