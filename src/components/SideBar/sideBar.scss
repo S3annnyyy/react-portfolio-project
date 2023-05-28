@@ -1,11 +1,12 @@
 .toggle-button {
-    position: absolute;
+    position: fixed;
     top: 50px;
     right: 50px;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 33px;
+    padding-left: 95%;
     height: 21px;
     z-index: 4;
 }
@@ -144,7 +145,6 @@
 @media screen and (max-width: 800px) and (max-height: 1070px) {
     .toggle-button {
         display: flex;
-        position: absolute;
     }
     .nav-bar {
         background-color: transparent;
