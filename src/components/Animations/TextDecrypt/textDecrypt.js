@@ -19,7 +19,7 @@ const decryptOptions = {
         'バ', 'ビ', 'ブ', 'ベ', 'ボ',
         'パ', 'ピ', 'プ', 'ペ', 'ポ',
     ],
-    interval: 5,
+    interval: 45,
 };
 
 export const TextDecrypt = (props) => {
@@ -36,9 +36,9 @@ export const TextDecrypt = (props) => {
     }, [dencrypt, props.text]);
 
     return (
-        <p>
+        <h1 className="vertical-timeline-element-title">
           {result}
           {" "}
-        </p>
+        </h1>
     );
 };

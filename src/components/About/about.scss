@@ -1,103 +1,52 @@
-// Initial styling for texts parked under layout.scss
+.text-zone {
+        position: absolute;
+        left: 8%;
+        transform: translateY(-50%);
+        width: 100%;
+        max-height: 90%;
 
-.intro {
-    font-size: 23px;
-    font-family: "Gotham Book";
-    color: #A9A9A9;
-    position: absolute;
-    margin-top: -5%;
-    padding-right: 5%;
-    background-color: #282828;
-    padding-left: 5%;
-    border-radius: 8px;
-    line-height: 1.6;
+        h1 {
+            color: #fff;
+            font-size: 55px;
+            margin: 0;
+            font-family: 'Coolvetica';
+            font-weight: 400;
+        }
 }
 
-.flat-button {
-    position: relative;
-    background: #68e2fa;
-    color: #333;
-    font-size: 20px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: 1.5px;
+.timeline {
+    padding-top: 2%;
     font-family: 'Coolvetica';
-    padding: 15px 18px;
-    border: 1px solid #68e2fa;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    float: right;
-    animation: fadeIn 1s 1,8s backwards;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
-    
-    &:hover {
-        transform: scale(1.1);
-        transition-duration: 0.3s;
+    font-weight: 200;
+
+    h1 {
+        letter-spacing: 2.5px;
     }
 
-    .rightA {
-        padding-left: 15px;
+    .vertical-timeline-element-subtitle {
+        color: #fff;
+        letter-spacing: 1.5px;
     }
-}
 
-.portrait {
-    width: 400px;
-    height: auto;
-    max-width: 30%;
-    max-height: 5%;
-    float: right;
-    margin-right: 23%;
-    margin-top: 6.8%;
-    border-radius: 8px;
-}
+    .experience-points {
+        font-size: 15px;
+    }
 
-@media screen and (max-width: 1700px) {
-    .container-about-page {
-        margin-left: 10%;
-
-        .text-zone {
-            width: 30%;
-        }
-
-        .portrait {
-            margin-top: 10%;
-        }
+    .experience-date {
+        color: rgb(209, 209, 209);
+        font-size: 13px;
     }
 }
 
-@media screen and (max-width: 1500px) {
-    .container-about-page {
-        margin-left: 10%;
-
-        .text-zone {
-            width: 70%;
-        }
-
-        .portrait {
-            display: none;
-        }
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .container-about-page {
-        .text-zone {
-            width: 88%;
-            margin-left: -5%;
-            h1 {
-                margin-top: -5%;
-                font-size: 41px;
-            }
+@media screen and (max-width: 800px){
+    .text-zone {
+        left: 2.5%;
+        h1 {
+            font-size: 40px;
         }
     }
 
-    .intro {
-        font-size: 21px;
-    }
-}
-
-@media screen and (max-width:420px) {
-    .intro {
-        font-size: 18px;
+    .timeline {
+        padding-top: 10%;
     }
 }

@@ -1,22 +1,19 @@
 import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters';
-import './about.scss';
-import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Loader from 'react-loaders';
+import './about.scss';
+import { useEffect, useState } from 'react';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import { TextDecrypt } from '../Animations/TextDecrypt/textDecrypt';
-import portraitPhoto from '../../assets/images/Me.JPG';
+import 'react-vertical-timeline-component/style.min.css';
+import { workExperience } from "./experience.js";
 
 const About = () => {
-    const intro1 = "Hi there! I'm Sean, currently a Year 1 undergraduate studying at Singapore Management University majoring in Information Systems. I previously interned at Foodpanda as a Commercial Analyst where I drove the creation of interactive dashboards to provide insights and optimize promotion strategy."
-    const intro2 = "In my free time, I like to increase my technical knowledge through personal projects and participating in hackathons. I’m always down to hear more about new projects or internship opportunities, so feel free to drop me a message!"
     const [letterClass, setLetterClass] = useState('text-animate')
 
     useEffect(() => {
         let timeoutId = setTimeout(() => {
             setLetterClass('text-animate-hover')
-        }, 3000)
+        }, 4000)
         return () => {
                     clearTimeout(timeoutId)
                 }
@@ -24,29 +21,47 @@ const About = () => {
 
     return (
         <>
-        <div className='container-about-page'>
+        <div className='container about-page'>
             <div className="text-zone">
                 <h1>
                     <AnimatedLetters
                         letterClass={letterClass}
-                        strArray={['A', 'b', 'o', 'u', 't',  ' ', 'm', 'e']}
+                        strArray={"Work experience".split("")}
                         idx={15}
                     />
                 </h1>
-                <div className='intro'>
-                    <p>
-                        {`${intro1}`}
-                        <TextDecrypt text={`${intro2}`}/>
-                    </p>
-                    <Link to="/contact" className='flat-button'>
-                        Send me a message
-                        <FontAwesomeIcon icon={faChevronRight} color="#181818" className='rightA'/>
-                        </Link>
-                </div>
             </div>
-            <div>
-                <img src={portraitPhoto} alt='Portrait Photo' className='portrait'/>
-            </div>
+            <div className='timeline'>
+                <VerticalTimeline>
+                    {
+                    workExperience.map(element => {
+                        return (
+                            <VerticalTimelineElement
+                                key={ element.id }
+                                className="vertical-timeline-element--work"
+                                contentStyle={element.contentStyle}
+                                contentArrowStyle={element.contentArrowStyle}
+                                iconStyle={element.iconStyle}
+                                icon={element.icon}
+                            >
+                            {/* <h1 className="vertical-timeline-element-title">{element.title}</h1> */}
+                            <TextDecrypt text={element.title}/>
+                            <h2 className="vertical-timeline-element-subtitle">{element.company}</h2>
+                            <ul>
+                                {element.points.map((point, index) => (
+                                    <li key={`experience-points-${index}`}
+                                        className='experience-points'>
+                                        {point}
+                                    </li>
+                                ))}
+                            </ul>
+                            <p className='experience-date'>{element.date}</p>
+                            </VerticalTimelineElement>
+                        )
+                    })
+                    }
+                </VerticalTimeline>
+        </div>
         </div>
         <Loader type="ball-scale-ripple-multiple" />
         </>
