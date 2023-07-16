@@ -8,7 +8,11 @@ export const workExperience = [
         title: 'Risk Insights Analyst Intern',
         company: "Tiktok, ByteDance",
         points: [
-            "Ongoing"
+            "Led weekly risk assessments and performed in-depth analysis on auction ads across global markets, successfully identifying and addressing risk violations and emerging trends",
+            "Kickstarted the launch of the SEA Accelerator Program, empowering agencies to effectively manage bad actors through the implementation of blocklisting and suspension mechanisms utilizing cutting-edge technologies like JEDI (GNNs) and Shark (RegEx)",
+            "Spearheaded the development of visualization dashboards to enhance reporting efficiency, support cross-functional teams, and enable real-time monitoring of key risk metrics",
+            "Conducted post-opening of Forex market assessment, combining a risk assessment matrix and detailed case deep-dives, to thoroughly evaluate the impact of the Forex market on SEA markets. Delivered valuable insights and recommendations regarding the safety and viability of Forex within these markets",
+            "Created audio to text translator using OpenAI speech recognition model"
         ],
         contentStyle: { background: '#1d1836', color: '#fff' },
         contentArrowStyle: { borderRight: '7px solid  #232631' },
