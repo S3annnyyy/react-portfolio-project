@@ -1,5 +1,4 @@
 import AnimatedLetters from '../Animations/AnimatedLetters/animatedLetters';
-import Loader from 'react-loaders';
 import './about.scss';
 import { useEffect, useState } from 'react';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
@@ -20,7 +19,6 @@ const About = () => {
     }, [])
 
     return (
-        <>
         <div className='container about-page'>
             <div className="text-zone">
                 <h1>
@@ -61,9 +59,8 @@ const About = () => {
                     })
                     }
                 </VerticalTimeline>
+            </div>
         </div>
-        </div>
-        </>
     )
 }
 
