@@ -80,7 +80,6 @@ const Projects = () => {
                 ))}
             </Slider>
             </div>
-            <Loader type='ball-scale-ripple-multiple'/>
         </div>
     )
 }

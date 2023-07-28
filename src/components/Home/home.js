@@ -50,7 +50,6 @@ const Home = () => {
                         </Link>
                 </div>
             </div>
-            <Loader type='ball-scale-ripple-multiple'/>
         </>
     )
 }

@@ -63,7 +63,6 @@ const About = () => {
                 </VerticalTimeline>
         </div>
         </div>
-        <Loader type="ball-scale-ripple-multiple" />
         </>
     )
 }
