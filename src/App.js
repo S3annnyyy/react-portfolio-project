@@ -9,7 +9,7 @@ import ContactPage from './components/ContactPage/contactPage.js';
 function App() {
   return (
     <>
-    <meta name="viewport" content="width=device-width, initial-scale = 0.86, maximum-scale=3.0, minimum-scale=0.86"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=3.0, minimum-scale=1.0"></meta>
     <Routes>
       <Route path="/" element={<Layout />} >
         <Route index element={<Home />} />
